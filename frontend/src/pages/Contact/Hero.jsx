@@ -27,9 +27,9 @@ const ContactHero = () => {
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8 }}
           >
-            <p className="text-[#A50C0C] text-2xl mb-4">
-              Contact Us
-            </p>
+              <span className="inline-block px-4 py-2 rounded-full bg-[#A50C0C] text-sm font-medium text-white mb-4">
+                Contact Us
+          </span>
 
             <h1 className="text-white text-5xl md:text-5xl font-bold leading-tight">
               Let’s Create Something

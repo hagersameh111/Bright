@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-
+import { Link } from "react-router-dom";
 const WhoWeAre = () => {
   return (
     <motion.section
@@ -35,12 +35,14 @@ const WhoWeAre = () => {
               marketing to turn ideas into impactful experiences.
             </p>
 
+<Link to="/about">
             <button
               className="mt-12 px-18 py-4 rounded-xl text-white text-xl transition-all duration-300 hover:scale-105"
               style={{ backgroundColor: "#A50C0C" }}
             >
               About Us
             </button>
+            </Link>
           </motion.div>
 
           {/* Right Image */}

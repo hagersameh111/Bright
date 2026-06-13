@@ -28,9 +28,9 @@ const EventsHero = () => {
           transition={{ duration: 0.8 }}
           className="max-w-2xl"
         >
-          <p className="text-[#A50C0C] text-2xl mb-6">
-            Bright Events
-          </p>
+            <span className="inline-block px-4 py-2 rounded-full bg-[#A50C0C] text-sm font-medium text-white mb-4">
+           Bright Events
+          </span>
 
           <h1 className="text-white text-5xl md:text-5xl font-bold leading-tight">
             Experiences That Leave

@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-
+import { Link } from "react-router-dom";
 export default function Hero() {
   return (
     <section
@@ -67,6 +67,7 @@ export default function Hero() {
             }}
             className="flex flex-col items-center justify-center gap-4 sm:flex-row"
           >
+            <Link to="/contact">
             <button
               className="
                 rounded-xl
@@ -81,7 +82,9 @@ export default function Hero() {
             >
               Start Your Project
             </button>
+            </Link>
 
+<Link to="/about">
             <button
               className="
                 rounded-xl
@@ -98,6 +101,7 @@ export default function Hero() {
             >
               See Our Services
             </button>
+            </Link>
           </motion.div>
         </div>
       </div>

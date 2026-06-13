@@ -10,7 +10,7 @@ const Contact = lazy(() => import("@/pages/Contact/ContactUs"));
 const Events = lazy(() => import("@/pages/Events/Events"));
 const EventDetails = lazy(() => import("@/pages/Events/sub/event"));
 const News = lazy(() => import("@/pages/News/News"));
-
+const Projects = lazy(() => import("@/pages/Projects/Project"));
 export default function AppRoutes() {
   return (
     <Suspense fallback={<div>Loading...</div>}>
@@ -22,6 +22,7 @@ export default function AppRoutes() {
           <Route path="/events" element={<Events />} />
           <Route path="/events/event-details" element={<EventDetails />} />
           <Route path="/news" element={<News />} />
+          <Route path="/projects" element={<Projects />} />
         </Route>
       </Routes>
     </Suspense>

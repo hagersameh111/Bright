@@ -28,6 +28,10 @@ export default function Navbar() {
       title: "News",
       path: "/news",
     },
+    {
+      title: "Projects",
+      path: "/projects",
+    }
   ];
 
   return (

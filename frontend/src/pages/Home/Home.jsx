@@ -6,6 +6,7 @@ import WhoWeAre from "@/pages/Home/WhoWeAre";
 import LatestProjects from "./projects";
 import OurClients from "./ourClients";
 import BreakingNewsBar from "./HomeNewsBar";
+import BusinessDevelopment from "./BusinessDevelopment";
 
 
 export default function Home() {
@@ -16,7 +17,8 @@ export default function Home() {
       <Hero />
       <BreakingNewsBar />
       <WhoWeAre />
-      <LatestProjects />
+      <LatestProjects /> 
+       <BusinessDevelopment />
       <OurClients />
       <Footer />
     </>

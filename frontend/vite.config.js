@@ -1,9 +1,9 @@
-import { defineConfig } from 'vite'
-import react from '@vitejs/plugin-react'
-import tailwindcss from '@tailwindcss/vite'
-import compression from 'vite-plugin-compression'
-import { visualizer } from 'rollup-plugin-visualizer'
-import path from 'path'
+import { defineConfig } from "vite";
+import react from "@vitejs/plugin-react";
+import tailwindcss from "@tailwindcss/vite";
+import compression from "vite-plugin-compression";
+import { visualizer } from "rollup-plugin-visualizer";
+import { fileURLToPath, URL } from "node:url";
 
 export default defineConfig({
   plugins: [
@@ -11,11 +11,11 @@ export default defineConfig({
     tailwindcss(),
 
     compression({
-      algorithm: 'gzip',
+      algorithm: "gzip",
     }),
 
     visualizer({
-      filename: 'dist/stats.html',
+      filename: "dist/stats.html",
       open: false,
       gzipSize: true,
       brotliSize: true,
@@ -24,23 +24,23 @@ export default defineConfig({
 
   resolve: {
     alias: {
-      '@': path.resolve(__dirname, './src'),
+      "@": fileURLToPath(new URL("./src", import.meta.url)),
     },
   },
 
   build: {
-    target: 'esnext',
+    target: "esnext",
     cssCodeSplit: true,
     sourcemap: false,
 
     rollupOptions: {
       output: {
         manualChunks: {
-          react: ['react', 'react-dom'],
-          router: ['react-router-dom'],
-          motion: ['framer-motion'],
+          react: ["react", "react-dom"],
+          router: ["react-router-dom"],
+          motion: ["framer-motion"],
         },
       },
     },
   },
-})
+});

@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
 import {
   MapPin,
   CalendarDays,
@@ -169,9 +170,10 @@ const EventsListing = () => {
               {/* Details */}
               <div className="p-6">
                 <Link
-  to="/events/event-details"
-  className="flex items-center gap-2 text-white mb-8 hover:text-[#A50C0C] transition"
-> <button className="flex items-center gap-2 text-white mb-8 hover:text-[#A50C0C] transition">
+                to="/events/event-details"
+                className="flex items-center gap-2 text-white mb-8 hover:text-[#A50C0C] transition"
+                >
+                   <button className="flex items-center gap-2 text-white mb-8 hover:text-[#A50C0C] transition">
                   View Details
                   <ArrowRight size={18} />
                 </button>

@@ -33,14 +33,6 @@ export default defineConfig({
     cssCodeSplit: true,
     sourcemap: false,
 
-    rollupOptions: {
-      output: {
-        manualChunks: {
-          react: ["react", "react-dom"],
-          router: ["react-router-dom"],
-          motion: ["framer-motion"],
-        },
-      },
-    },
+   
   },
 });

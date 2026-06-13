@@ -1,5 +1,8 @@
 import { useState } from "react";
 import { NavLink } from "react-router-dom";
+import { BsList } from "react-icons/bs";
+import { motion, AnimatePresence } from "framer-motion";
+
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -56,32 +59,50 @@ export default function Navbar() {
 
         <button
           onClick={() => setIsOpen(!isOpen)}
-          className="text-white lg:hidden"
+          className="text-white lg:hidden "
         >
-          ☰
+         <BsList size={30} />
         </button>
       </div>
 
-      {isOpen && (
-        <div className="bg-black lg:hidden">
-          {navLinks.map((link) => (
-            <NavLink
-              key={link.title}
-              to={link.path}
-              onClick={() => setIsOpen(false)}
-              className={({ isActive }) =>
-                `block border-b border-white/10 px-6 py-4 ${
-                  isActive
-                    ? "text-[#FF2E0F]"
-                    : "text-white"
-                }`
-              }
-            >
-              {link.title}
-            </NavLink>
-          ))}
-        </div>
-      )}
+     <AnimatePresence>
+  {isOpen && (
+    <motion.div
+      initial={{ height: 0, opacity: 0 }}
+      animate={{ height: "auto", opacity: 1 }}
+      exit={{ height: 0, opacity: 0 }}
+      transition={{ duration: 0.35 }}
+      className="overflow-hidden bg-black lg:hidden"
+    >
+      {navLinks.map((link, index) => (
+        <motion.div
+          key={link.title}
+          initial={{ x: -20, opacity: 0 }}
+          animate={{ x: 0, opacity: 1 }}
+          exit={{ x: -20, opacity: 0 }}
+          transition={{
+            duration: 0.3,
+            delay: index * 0.05,
+          }}
+        >
+          <NavLink
+            to={link.path}
+            onClick={() => setIsOpen(false)}
+            className={({ isActive }) =>
+              `block border-b border-white/10 px-6 py-4 ${
+                isActive
+                  ? "text-[#FF2E0F]"
+                  : "text-white"
+              }`
+            }
+          >
+            {link.title}
+          </NavLink>
+        </motion.div>
+      ))}
+    </motion.div>
+  )}
+</AnimatePresence>
     </header>
   );
 }

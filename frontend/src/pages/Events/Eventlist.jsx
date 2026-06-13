@@ -168,11 +168,14 @@ const EventsListing = () => {
 
               {/* Details */}
               <div className="p-6">
-                <a href="/events/event-details"> <button className="flex items-center gap-2 text-white mb-8 hover:text-[#A50C0C] transition">
+                <Link
+  to="/events/event-details"
+  className="flex items-center gap-2 text-white mb-8 hover:text-[#A50C0C] transition"
+> <button className="flex items-center gap-2 text-white mb-8 hover:text-[#A50C0C] transition">
                   View Details
                   <ArrowRight size={18} />
                 </button>
-</a>
+                </Link>
                 <div className="space-y-6">
                   <div>
                     <div className="flex items-center gap-2 text-[#A50C0C] mb-2">

@@ -21,6 +21,7 @@
     "react-intersection-observer": "^10.0.3",
     "react-lazy-load-image-component": "^1.6.3",
     "react-router-dom": "^7.17.0",
+    "rss-parser": "^3.13.0",
     "tailwindcss": "^4.3.0"
   },
   "devDependencies": {

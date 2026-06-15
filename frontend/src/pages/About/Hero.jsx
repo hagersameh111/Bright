@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-
+import { Link } from "react-router-dom";
 const AboutHero = () => {
   return (
     <section className="relative min-h-screen overflow-hidden">
@@ -46,7 +46,7 @@ const AboutHero = () => {
               focused on building impactful digital experiences
               through strategy, storytelling, and visual creativity.
             </p>
-
+<Link to="/projects">
             <button
               className="mt-10 px-10 py-4 rounded-xl text-white text-2xl transition-all duration-300 hover:scale-105"
               style={{
@@ -55,6 +55,7 @@ const AboutHero = () => {
             >
               Explore Our Work
             </button>
+            </Link>
           </motion.div>
 
        

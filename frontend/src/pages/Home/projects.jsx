@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
 
 const LatestProjects = () => {
   const projects = [
@@ -87,11 +88,13 @@ const LatestProjects = () => {
           transition={{ duration: 0.8, delay: 0.4 }}
           className="flex justify-center mt-10"
         >
+          <Link to="/projects">
           <button
             className="px-12 py-4 rounded-2xl text-white text-2xl border border-[#A50C0C] hover:bg-[#A50C0C] transition-all duration-300"
           >
             View All Projects
           </button>
+          </Link>
         </motion.div>
       </div>
     </section>

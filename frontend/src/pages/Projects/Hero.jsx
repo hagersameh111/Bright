@@ -1,6 +1,6 @@
 export default function ProjectsHero() {
   return (
-    <section className="relative min-h-screen flex items-center">
+    <section className="relative h-[75vh] flex items-center">
       {/* Background Image */}
       <div
         className="absolute inset-0 bg-cover bg-center"
@@ -13,13 +13,13 @@ export default function ProjectsHero() {
       <div className="absolute inset-0 bg-[#02152f]/80" />
 
       {/* Gradient Overlay */}
-      <div className="absolute inset-0 bg-gradient-to-r from-[#02152f]/50 via-[#02152f]/40 to-transparent" />
+      <div className="absolute inset-0 bg-gradient-to-r from-[#02152f]/20 via-[#02152f]/10 to-transparent" />
 
       {/* Content */}
       <div className="relative z-10 max-w-7xl mx-auto px-6 lg:px-8 w-full">
         <div className="max-w-2xl">
-          <span className="text-[#D20A11] text-lg md:text-xl font-semibold">
-            Bright Projects
+             <span className="inline-block px-4 py-2 rounded-full bg-[#A50C0C] text-sm font-medium text-white mb-4">
+            About Us
           </span>
 
           <h1 className="mt-4 text-5xl md:text-7xl font-bold text-white leading-tight">
@@ -35,9 +35,7 @@ export default function ProjectsHero() {
             help businesses stand out and scale.
           </p>
 
-          <button className="mt-10 bg-[#D20A11] hover:bg-red-700 transition-all duration-300 text-white px-10 py-4 rounded-2xl text-xl font-medium">
-            Explore Projects
-          </button>
+          
         </div>
       </div>
     </section>

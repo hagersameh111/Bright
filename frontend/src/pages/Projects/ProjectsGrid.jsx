@@ -46,7 +46,9 @@ const projects = [
 export default function ProjectsGrid() {
   return (
     <section className="bg-[#04162D] py-20">
+        
       <div className="max-w-7xl mx-auto px-6">
+        
         <div className="grid grid-cols-1 md:grid-cols-4 auto-rows-[220px] gap-6">
           {projects.map((project) => (
             <div

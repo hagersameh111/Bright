@@ -27,3 +27,8 @@ body {
    animation: marquee 9s linear infinite;
   will-change: transform;
 }
+@media (max-width: 768px) {
+  .animate-marquee {
+    animation-duration: 6s;
+  }
+}
